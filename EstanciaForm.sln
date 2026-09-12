@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.36617.4
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EstanciaForm", "EstanciaForm\EstanciaForm.csproj", "{8BE99E9F-9CF1-4EFA-8F3B-93D95ADA17C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8BE99E9F-9CF1-4EFA-8F3B-93D95ADA17C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8BE99E9F-9CF1-4EFA-8F3B-93D95ADA17C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8BE99E9F-9CF1-4EFA-8F3B-93D95ADA17C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8BE99E9F-9CF1-4EFA-8F3B-93D95ADA17C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7A95AA4A-AA8C-4ABC-AEA3-E0F09E22AC87}
+	EndGlobalSection
+EndGlobal
