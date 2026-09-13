@@ -1,0 +1,147 @@
+﻿I. Enunciado
+
+Una estancia agropecuaria tiene un nombre y está compuesta por al menos un campo en su momento de conformación. En el mismo acto se establece un casco central a 
+cargo de un Administrador y varios puestos rurales, de los cuales cada uno se puede conocer el nombre del encargado. Tanto el casco como el puesto son instalaciones y viviendas 
+donde se aloja el dueño y personal de la estancia. 
+
+Cada campo se caracteriza por tener una superficie determinada (hectáreas) y un identificador que debe ser único dentro del contexto administrativo de la estancia. 
+La administración de los campos consiste solo en el alta de los mismos, y por otro lado, lo que es la baja de estos se contemplará en un futuro análisis del sistema.
+
+La administración de un campo individual implica crear las parcelas o eliminar las parcelas del mismo.  Cada parcela debe tener un identificador único dentro del 
+contexto administrativo del propio campo y una superficie asignada (hectáreas). La suma de hectáreas de todas las parcelas en un campo debe ser coherente con la 
+superficie total del campo.
+
+Cada actividad consta de una descripción, un periodo productivo y al menos tiene asignado un lote. Cada actividad productiva se agrega a la estancia 
+indicando su periodo de vigencia, descripción y el lote en el que se va a desarrollar. A esta luego se le pueden asignar más lotes. En el cierre de toda 
+actividad se ingresan los datos productivos propios del tipo de actividad que sea.
+
+En general, desde la administración de la estancia, lo que importa es poder saber de todas las actividades la producción total (dinero) y la productividad general (porcentaje).
+
+Una de las actividades que se suelen desarrollar es la actividad Agrícola. Esta requiere una serie de parcelas durante todo su ciclo productivo, lleva la cuenta 
+de las toneladas cosechadas y el precio de la tonelada al cierre del ciclo productivo. 
+
+En cambio la actividad en la actividad Ganadera se debe conocer  cantidad de cabezas total y se subdivide en diferentes tipos como:
+
+Cría: se centra en el número de vacas madres, la cantidad de terneros destetados y el precio de venta de cada ternero.
+Recría: consiste en la recría de animales destetados hasta alcanzar un determinado peso, lo que se mide en kilos de carne logrados.
+Invernada: toma animales recriados y los engorda hasta peso de faena, registrando kilos iniciales, kilos finales y el precio por kilo.
+
+A cada actividad se le asocia una descripción y debe permitir calcular la superficie ocupada, el rendimiento productivo y la producción generada (ya sea en kilos de carne o toneladas de grano).
+
+
+
+III. Casos de uso
+
+1- Alta de la estancia.
+
+Resumen: La estancia requiere de un nombre, un identificador y la superficie del primer campo que la constituirá. En este campo 
+se va a crear el casco y un puesto sin designar los nombres de los encargados de ambas entidades. 
+
+a- El sistema solicita el nombre del establecimiento
+b- El sistema solicita los datos del primer campo (usa “Agregar Campo”)
+c- El sistema muestra el éxito del alta del registro.
+
+
+
+2- Administración de los campos
+
+a- El sistema muestra la lista de campos. (incluye al caso: 2.1. Ver listado actualizado de campos.)
+
+b- El sistema muestra la lista de acciones disponibles y que son:
+
+Actualizar listado  (incluye al caso: 3. Ver listado actualizado de campos.)
+Agregar Campo (incluye al caso: 4. Agregar Campo.)
+Administrar un campo. (incluye al caso: 5.  Administrar Campo. )
+
+c- El usuario elige una opción dada.
+
+
+3. Ver listado actualizado de campos.
+
+El sistema muestra el listado de campos.
+
+4. Agregar Campo.
+
+a. El sistema solicita los datos del campo (identificador y superficie.)
+b. El usuario ingresa la identificación del campo y la superficie total del campo.
+c. El sistema muestra el éxito del alta del campo.
+
+Alternativas.
+b.1 Identificador incorrecto. El identificador ya existe o es nulo
+b.1 Superficie incorrecta. La superficie es cero.
+
+
+5. Administrar Campo.
+
+a- El sistema solicita el campo a administrar 
+ (previamente se seleccionó de una lista y es ese el que se va a administrar)
+b- El sistema muestra su identificador, superficie total del campo y la superficie sin parcelar (en hectáreas)
+c- El sistema muestra las parcelas disponibles del campo seleccionado (incluye al caso: 6. Ver listado de parcelas)
+d- El sistema muestra la lista de acciones que se pueden aplicar al campo seleccionado.
+Actualizar listado  (incluye al caso: 6. Ver listado de parcelas.)
+Agregar Campo (incluye al caso: 7. Agregar Parcela.)
+Administrar un campo. (incluye al caso: 8.  Modificar parcela )
+   
+e- El usuario elige una opción disponible. (continua con el caso de uso seleccionado)
+
+
+6. Ver listado de parcelas
+
+a- El sistema solicita el campo para ver sus parcelas. 
+(previamente se ha seleccionado el campo)
+
+b- El sistema muestra la lista de parcelas. (identificador, área asignada)
+
+
+7. Ver listado de parcelas
+
+a- El sistema solicita un campo 
+
+
+8. Ver listado de parcelas
+
+a- El sistema solicita una parcela 
+(previamente se ha seleccionado la parcela)
+
+
+9. Administrar Actividades.
+
+a- El sistema muestra todas las actividades del establecimiento. (10. Ver listado de actividades productivas)
+
+b- El sistemas las operaciones administrativas de las actividades
+
+Actualizar listado  (incluye al caso: 10. Ver listado de actividades productivas)
+Agregar Actividad (incluye al caso: 11. Agregar Actividad)
+Administrar una actividad. (incluye al caso: 12.  Administrar Actividad )
+   
+c- El usuario elige una opción disponible. (continua con el caso de uso seleccionado)
+
+
+10. Ver listado de actividades productivas.
+
+a- El sistema solicita el campo para ver sus parcelas. 
+(previamente se ha seleccionado el campo)
+
+b- El sistema muestra la lista de parcelas. (identificador, área asignada)
+
+
+11. Agregar Actividad.
+
+a. El sistema solicita los datos de la actividad (periodo y descripción)
+b. El usuario ingresa los datos solicitados del periodo
+c. El sistema muestra el éxito del alta de la actividad.
+
+
+12.  Administrar Actividad
+Tarea 1. 
+Desarrollar los casos de usos y modelos dados.
+
+Tarea 2.
+Considere extender el modelo de actividad productiva de la estancia en alguna actividad económica específica. Agregar los formularios administrativos y realizar las adaptaciones en el código base para administrar esta tarea.
+
+Se puede elegir alguna tarea, por ejemplo, cómo: Forestal, turismo rural, apicultura o  avícola.
+
+Tarea 3.
+La presentación y defensa 
+Es un grupo de dos a tres integrantes en el horario de tutorías. 
+Consiste presentar en el proyector y contar qué modelo de negocio incorporaron a la estancia desde la vista del usuario y luego las cuestiones de implementación técnicas. Se debe explicar los fundamentos académicos aplicados.

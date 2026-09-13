@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EstanciaForm.Clases
 {
-    class Campo
+    class Campos
     {
         string Identificador;
         double SuperficieTotal;
@@ -14,10 +14,11 @@ namespace EstanciaForm.Clases
 
         private List<Parcela> parcelas = new List<Parcela>();
 
-        public Campo(string identificador, double superficie) {
+        public Campos(string identificador, double superficie) {
             Identificador = identificador;
             SuperficieTotal += superficie;
         }
+
         public bool CrearParcela(string Identificador, double Superficie) {
             bool verificacion = false; //crear verificador
             if (BuscarParcela(Convert.ToInt32(Identificador)) >= 0 && Superficie < SuperficieOcupadaTotal()) {

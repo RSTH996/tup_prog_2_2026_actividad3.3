@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using EstanciaForm.Clases;
 
 namespace EstanciaForm.Clases
 {
@@ -19,19 +20,29 @@ namespace EstanciaForm.Clases
         private List<Puesto> puestos = new List<Puesto>();
         Casco casco; 
 
-        public Estancia(string nombreEstancia, Campo campo) {
+        public Estancia(string nombreEstancia, Campos campo) {
             this.Nombre = nombreEstancia;
             campos.Add(campo);
         }
         public bool AltaActividad(int Actividad) {
             return false;
         }
-        public Campo VerCampo(int idx) {
-            return (Campo)campos[idx];
+        public Campos VerCampo(int idx) {
+            return (Campos)campos[idx];
         }
+        /*
         public Actividad AgregarActividad(int periodo, string descripcion, int tipo){
-            Actividad a = new Actividad(periodo, descripcion);
-            return actividades.Add(a);
+            Actividad actividad;
+            actividad.Periodo = periodo;
+            actividad.Descripcion = descripcion;
+            actividades.Add(actividad);
+            return actividad;
+        } */       
+        public Puesto AgregarPuesto(string encargado) {
+            Puesto p = new Puesto();
+            p.Encargado = encargado;
+            puestos.Add(p);
+            return p;
         }
     }
 }
