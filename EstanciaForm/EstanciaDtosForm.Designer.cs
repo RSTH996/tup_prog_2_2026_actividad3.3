@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.tbNombre = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.tbEditar = new System.Windows.Forms.Button();
             this.lbDescripcion = new System.Windows.Forms.Label();
-            this.tbAgregar = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnOK = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +52,13 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Informacion General";
             // 
+            // tbNombre
+            // 
+            this.tbNombre.Location = new System.Drawing.Point(89, 43);
+            this.tbNombre.Name = "tbNombre";
+            this.tbNombre.Size = new System.Drawing.Size(163, 20);
+            this.tbNombre.TabIndex = 1;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -59,33 +68,26 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre";
             // 
-            // tbNombre
-            // 
-            this.tbNombre.Location = new System.Drawing.Point(89, 43);
-            this.tbNombre.Name = "tbNombre";
-            this.tbNombre.Size = new System.Drawing.Size(163, 20);
-            this.tbNombre.TabIndex = 1;
-            // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.tbAgregar);
+            this.groupBox2.Controls.Add(this.tbEditar);
             this.groupBox2.Controls.Add(this.lbDescripcion);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(17, 136);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(327, 87);
+            this.groupBox2.Size = new System.Drawing.Size(327, 104);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Solicitud del Primer Campo";
             // 
-            // label2
+            // tbEditar
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 26);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Descripcion\r\n General";
+            this.tbEditar.Location = new System.Drawing.Point(211, 27);
+            this.tbEditar.Name = "tbEditar";
+            this.tbEditar.Size = new System.Drawing.Size(99, 44);
+            this.tbEditar.TabIndex = 2;
+            this.tbEditar.Text = "Editar";
+            this.tbEditar.UseVisualStyleBackColor = true;
             // 
             // lbDescripcion
             // 
@@ -96,20 +98,42 @@
             this.lbDescripcion.TabIndex = 1;
             this.lbDescripcion.Text = "label3";
             // 
-            // tbAgregar
+            // label2
             // 
-            this.tbAgregar.Location = new System.Drawing.Point(211, 27);
-            this.tbAgregar.Name = "tbAgregar";
-            this.tbAgregar.Size = new System.Drawing.Size(99, 44);
-            this.tbAgregar.TabIndex = 2;
-            this.tbAgregar.Text = "Agregar";
-            this.tbAgregar.UseVisualStyleBackColor = true;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(12, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(63, 26);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Descripcion\r\n General";
+            // 
+            // btnOK
+            // 
+            this.btnOK.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.btnOK.Location = new System.Drawing.Point(35, 262);
+            this.btnOK.Name = "btnOK";
+            this.btnOK.Size = new System.Drawing.Size(111, 57);
+            this.btnOK.TabIndex = 2;
+            this.btnOK.Text = "Confirmar";
+            this.btnOK.UseVisualStyleBackColor = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.btnCancel.Location = new System.Drawing.Point(205, 264);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(121, 54);
+            this.btnCancel.TabIndex = 3;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // EstanciaDtosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(361, 353);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnOK);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Name = "EstanciaDtosForm";
@@ -128,8 +152,10 @@
         public System.Windows.Forms.TextBox tbNombre;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Button tbAgregar;
+        private System.Windows.Forms.Button tbEditar;
         public System.Windows.Forms.Label lbDescripcion;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

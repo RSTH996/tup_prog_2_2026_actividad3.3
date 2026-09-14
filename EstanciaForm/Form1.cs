@@ -26,17 +26,22 @@ namespace EstanciaForm
         Campos campitos;
         EstanciaDtosForm ventana;
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             ventana = new EstanciaDtosForm();
+            ventana.lbDescripcion.Text = "Código RDH950 \n con 350.90 hetareas";
             if (ventana.ShowDialog() == DialogResult.OK) {
-                campitos = new Campos("RDH950",350.90);
+                if (campitos.CrearParcela("RDH950", 350.90))
+                {
+                    MessageBox.Show($"{campitos.VerParcela(0)}");
+                }
+                else { MessageBox.Show("Puto"); }
             }
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
         }
     }
 }

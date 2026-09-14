@@ -13,7 +13,7 @@ namespace EstanciaForm.Clases.Campo.Actividades
 
         public Agricola(int periodo, string descripcion):base(periodo, descripcion) {}
         public override double CalcularRendimiento() {
-            return CantidadToneladasCosechas * PrecioTonelada;
+            return (CantidadToneladasCosechas * PrecioTonelada)/base.Periodo;
         }
         public override double CalcularProduccion(){
             return CantidadToneladasCosechas * PrecioTonelada;
